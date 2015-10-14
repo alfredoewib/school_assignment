@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ini Judul Website</title>
+    </head>
+    <body>
+        <h1>Belajar Javascript Array Metode</h1>
+
+        <!-- valueOf() -->
+        <div>
+            <p>Value Of</p>
+            <script type="text/javascript">
+                var a = new Array("gayung", "handuk", "sikat gigi");
+                document.write(a.valueOf());
+            </script>
+        </div>
+        <!-- sort() -->
+        <div>
+            <p>Sort</p>
+            <script type="text/javascript">
+                var a = new Array("celana", "gayung", "baju", "handuk", "sikat gigi");
+                var ab = a.sort();
+                for (var i = 0; i < ab.length; i++) {
+                    document.write(ab[i] + " ");
+                }
+            </script>
+        </div>
+        <!-- join() -->
+        <div>
+            <p>Join</p>
+            <script type="text/javascript">
+                var a = new Array("celana", "gayung", "baju", "handuk", "sikat gigi");
+                var ab = a.join("-");
+                for (var i = 0; i < ab.length; i++) {
+                    document.write(ab[i]);
+                }
+            </script>
+        </div>
+    </body>
+</html>

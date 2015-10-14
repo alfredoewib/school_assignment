@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ini Judul</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <style>
+        img {
+            width: 150px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="row">
+                <div class="panel panel-default" style="margin-top: 100px">
+                    <div class="panel-heading">
+                        <h3 class="panel-title text-center">
+                            Belajar jQuery
+                        </h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <div>
+                            <p class="text1">Jamik</p>
+                            <img src="assets/img/a.jpg" class="img-circle img1" alt="" />
+                            <br><br>
+                            <button class="btn btn-default" id="btn1">Klik!</button>
+                        </div>
+                        <br><br>
+                        <form method="post">
+                            <input type="text" id="inputan1" class="form-control" name="name" value="">
+                            <input type="submit" class="btn btn-default">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="assets/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#btn1').click(function() {
+                $('.text1').html('<i>Siapa ini?</i>')
+            });
+            $('form').submit(function(e) {
+                e.preventDefault();
+                $('.text1').text($('#inputan1').val());
+            });
+        });
+    </script>
+</body>
+</html>

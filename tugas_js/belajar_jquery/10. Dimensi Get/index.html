@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ini Judul</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <style>
+        img {
+            width: 150px;
+            height: auto;
+        }
+
+        .kotak {
+            height: 110px;
+            width: 150px;
+            padding: 10px;
+            border: 4px solid black;
+            margin: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="row">
+                <div class="panel panel-default" style="margin-top: 100px">
+                    <div class="panel-heading">
+                        <h3 class="text-center">
+                            Belajar jQuery
+                        </h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <div class="text-left kotak blue">
+                            <ul class="example-list">
+                                <li>List One</li>
+                                <li>List One</li>
+                                <li>List One</li>
+                                <li>List One</li>
+                            </ul>
+                        </div>
+                        <br>
+                        <p></p>
+                        <br>
+                        <button class="btn btn-default btn-get">
+                            Get Dimension
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="assets/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var h1, w1, h2, w2, h3, w3, h4, w4;
+            $('.btn-get').click(function() {
+                h1 = $('.kotak').height(); w1 = $('.kotak').width();
+                //padding
+                h2 = $('.kotak').innerHeight(); w2 = $('.kotak').innerWidth();
+                //border
+                h3 = $('.kotak').outerHeight(); w3 = $('.kotak').outerWidth();
+                //margin
+                h4 = $('.kotak').outerHeight(true); w4 = $('.kotak').outerWidth(true);
+
+                $('p').append(h1 + " " + w1 + " " + h2 + " " + w2 + " " + h3 + " " + w3 + " " + h4 + " " + w4);
+            });
+
+
+
+        });
+    </script>
+</body>
+</html>

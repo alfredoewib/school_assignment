@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ini Judul</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <style>
+        img {
+            width: 150px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="row">
+                <div class="panel panel-default" style="margin-top: 100px">
+                    <div class="panel-heading">
+                        <h3 class="text-center">
+                            Belajar jQuery
+                        </h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <div>
+                            <p class="text1">Jamik</p>
+                            <img src="assets/img/a.jpg" class="img-circle img1" alt="" />
+                            <br><br>
+                            <button class="btn btn-default" id="btn1">Klik!</button>
+                        </div>
+                        <br><br>
+                        <div class="text-left">
+                            <ul class="example-list">
+                                <li>List One</li>
+                                <li>List One</li>
+                                <li>List One</li>
+                                <li>List One</li>
+                            </ul>
+                            <button class="btn btn-default btn-awal">
+                                Tambah Awal
+                            </button>
+                            <button class="btn btn-default btn-akhir">
+                                Tambah Akhir
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="assets/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#btn1').click(function() {
+                $('h3').append(' Menambahkan Element');
+                $('.example-list').before('Ketambahan di awal')
+                $('.example-list').after('Ketambahan di akhir')
+            });
+
+            $('.btn-awal').click(function() {
+                $('.example-list').prepend('<li>Elemet Baru</li>')
+            });
+            $('.btn-akhir').click(function() {
+                $('.example-list').append('<li>Elemet Baru</li>')
+            });
+
+
+
+        });
+    </script>
+</body>
+</html>

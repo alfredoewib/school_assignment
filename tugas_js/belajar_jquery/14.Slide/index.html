@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ini Judul</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <style>
+        img {
+            width: 150px;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="row">
+                <div class="panel panel-default" style="margin-top: 100px">
+                    <div class="panel-heading">
+                        <h3 class="text-center">
+                            Belajar jQuery
+                        </h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <h4>Belajar jQuery Hide and Show</h4>
+                        <button class="btn btn-default btn-in">
+                            slideIn
+                        </button>
+                        <button class="btn btn-default btn-out">
+                            slideOut
+                        </button>
+                        <button class="btn btn-default btn-toggle">
+                            Toggle
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="assets/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var h1, w1, h2, w2, h3, w3, h4, w4;
+            $('.btn-in').click(function() {
+                $('h4').slideUp();
+            });
+
+            $('.btn-out').click(function() {
+                $('h4').slideDown();
+            });
+
+            $('.btn-toggle').click(function() {
+                $('h4').slideToggle();
+            });
+        });
+    </script>
+</body>
+</html>
